@@ -16,16 +16,21 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'angularTesting-romanosTDD'`, () => {
+  it(`should have as title 'Conversor'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('angularTesting-romanosTDD');
+    expect(app.title).toEqual('Conversor');
   });
 
-  it('should render title', () => {
+  it(`Result init`, () => {
     const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('angularTesting-romanosTDD app is running!');
+    const app = fixture.componentInstance;
+    expect(app.resultado).toEqual(false);
+  });
+
+  it(`should have as subtitle 'Número arábigo a número romano'`, () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.componentInstance;
+    expect(app.subtitle).toEqual('Número arábigo a número romano');
   });
 });
